@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
-/* *{
+*{
     margin: 0;
     padding: 0;
-} */
+}
 .work-sans-font {
   font-family: "Work Sans", sans-serif;
   font-optical-sizing: auto;
@@ -121,6 +121,18 @@ main > section{
     border-radius: 20px;
     margin-top: 20px;
 }
+#experience-badge{
+    padding: 45px 42px;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-left: -100px;
+    margin-top: -100px;
+}
+#experience-year{
+    font-size: 4rem;
+    font-weight: 700;
+}
+
 /* some facts styles  */
 .facts-container{
     display: grid;
@@ -141,7 +153,9 @@ main > section{
 .fact-name{
     font-size: 1.25rem;
 }
-
+.features-img img{
+    width: 100%;
+}
 /* sponsor related styles  */
 .sponsor-info{
     max-width: 540px;
@@ -156,11 +170,24 @@ main > section{
     filter: grayscale(100%);
 }
 
+/* footer styles  */
+.footer{
+    max-width: 1440px;
+    margin: 0 auto;
+    background-color: #fff4e7;
+    margin: 100px auto;
+    padding: 10px 0;
+    text-align: center;
+}
+.footer p{
+    font-size: 20px;
+}
 /* responsive media query  */
 @media screen and (max-width: 576px) {
     .navbar, 
     .nav-links, 
-    .teams{
+    .teams,
+    .features{
         flex-direction: column;
         /* text-align: center; */
     }
@@ -182,11 +209,16 @@ main > section{
         justify-items: center;
         gap: 50px;
     }
+    #experience-badge{
+        margin-top: 20px;
+        margin-left: 20px;
+    }
 }
 
 /* medium size device  */
 @media screen and (min-width: 576px) and (max-width:992px) {
-    .teams{
+    .teams, 
+    .features{
         flex-direction: column;
     }
     .our-features{
@@ -194,6 +226,10 @@ main > section{
     }
       .our-features, .some-facts{
         text-align: center;
+    }
+     #experience-badge{
+        margin-top: 20px;
+        margin-left: 20px;
     }
     .facts-container{
         grid-template-columns: repeat(2, 1fr);
